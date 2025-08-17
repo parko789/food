@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เมนูพิซซ่า - ร้านอาหารอร่อยเด็ด</title>
+    <link rel="stylesheet" href="pizza.css">
+</head>
+<style>
+     body {
+            font-family: sans-serif;
+            background-image: url('3.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+</style>
+<body>
+    <header>
+        <h1>🧸 เมนูผัด</h1>
+    </header>
+
+    <div class="container">
+        <button class="back-button" onclick="window.history.back()">← กลับหน้าหลัก</button>
+        
+
+        <div class="pizza-menu">
+            <h2>เลือกผัด</h2>
+            
+            <div class="pizza-grid">
+                <div class="pizza-item">
+                    <img src="https://recipe.sgethai.com/wp-content/uploads/2025/06/300625-ham-fried-rice-cover-600x314.webp" alt="พิซซ่าเปปเปอโรนี" class="pizza-image">
+                    <div class="pizza-info">
+                        <h3>ข้าวผัดแฮม</h3>
+                        <p class="pizza-description">ข้าวผัดแฮม เมนูข้าวผัดทานง่าย ทำง่าย  อร่อย</p>
+                        <div class="pizza-details">
+                            <span class="pizza-size">9 นิ้ว</span>
+                            <span class="pizza-price">180 บาท</span>
+                        </div>
+                        <button class="order-btn">สั่งเลย!</button>
+                    </div>
+                </div>
+
+                <div class="pizza-item">
+                    <img src="https://recipe.sgethai.com/wp-content/uploads/2025/06/cover-25062025-kimchi-fried-rice_result-600x314.webp" alt="พิซซ่าฮาวายเอี้ยน" class="pizza-image">
+                    <div class="pizza-info">
+                        <h3>ข้าวผัดกิมจิ (김치 볶음밥)</h3>
+                        <p class="pizza-description">อร่อยถูกปากมีรสชาติครบรส</p>
+                        <div class="pizza-details">
+                            <span class="pizza-size">9 นิ้ว</span>
+                            <span class="pizza-price">160 บาท</span>
+                        </div>
+                        <button class="order-btn">สั่งเลย!</button>
+                    </div>
+                </div>
+
+                <div class="pizza-item">
+                    <img src="https://recipe.sgethai.com/wp-content/uploads/2025/06/160625-american-fried-rice-cover-600x314.webp" alt="พิซซ่าซีฟู้ด" class="pizza-image">
+                    <div class="pizza-info">
+                        <h3>ข้าวผัดอเมริกัน</h3>
+                        <p class="pizza-description">ข้าวผัดอเมริกัน อาหารจานเดียวแสนอร่อย</p>
+                        <div class="pizza-details">
+                            <span class="pizza-size">9 นิ้ว</span>
+                            <span class="pizza-price">220 บาท</span>
+                        </div>
+                        <button class="order-btn">สั่งเลย!</button>
+                    </div>
+                </div>
+
+                <div class="pizza-item">
+                    <img src="https://recipe.sgethai.com/wp-content/uploads/2025/06/cover-12062025-stir-fried-prawns-with-chili-and-salt-600x314.webp" alt="พิซซ่ามาการีต้า" class="pizza-image">
+                    <div class="pizza-info">
+                        <h3>กุ้งผัดพริกเกลือ</h3>
+                        <p class="pizza-description">มีรสเค็ม เผ็ด กำลังดี ทานคู่กับข้าวสวยร้อน ๆ ฟิน ๆ</p>
+                        <div class="pizza-details">
+                            <span class="pizza-size">9 นิ้ว</span>
+                            <span class="pizza-price">150 บาท</span>
+                        </div>
+                        <button class="order-btn">สั่งเลย!</button>
+                    </div>
+                </div>
+
+             
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        📞 โทรสั่ง: 081-234-5678 | 🕙 เปิดทุกวัน 10:00-22:00 น.<br>
+        🚚 ส่งฟรี! เมื่อสั่งครบ 300 บาท (รัศมี 5 กม.)
+    </footer>
+
+    <script>
+        // เพิ่ม animation เมื่อ scroll
+        window.addEventListener('scroll', () => {
+            const items = document.querySelectorAll('.pizza-item');
+            items.forEach(item => {
+                const rect = item.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 100) {
+                    item.style.opacity = '1';
+                    item.style.transform = 'translateY(0)';
+                }
+            });
+        });
+
+        // เริ่มต้นซ่อน items
+        document.addEventListener('DOMContentLoaded', () => {
+            const items = document.querySelectorAll('.pizza-item');
+            items.forEach((item, index) => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(30px)';
+                item.style.transition = `all 0.6s ease ${index * 0.1}s`;
+            });
+        });
+
+        // ฟังก์ชันสั่งพิซซ่า
+        document.querySelectorAll('.order-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const pizzaName = this.closest('.pizza-item').querySelector('h3').textContent;
+                alert(`🍕 เพิ่ม "${pizzaName}" ลงตะกร้าแล้ว!\n\nโทรสั่ง: 081-234-5678`);
+            });
+        });
+    </script>
+</body>
+</html>

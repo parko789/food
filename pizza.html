@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เมนูพิซซ่า - ร้านอาหารอร่อยเด็ด</title>
+    <link rel="stylesheet" href="pizza.css">
+</head>
+<style>
+     body {
+            font-family: sans-serif;
+            background-image: url('7.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+</style>
+<body>
+    <!-- Floating Particles -->
+    <div class="particles" id="particles"></div>
+
+    <header>
+        <h1>🍕 เมนูพิซซ่าสุดพิเศษ</h1>
+    </header>
+
+    <div class="container">
+        <button class="back-button" onclick="window.history.back()">← กลับหน้าหลัก</button>
+        
+        <div class="special-offer loading">
+            <h3>🎉 โปรโมชั่นพิเศษ!</h3>
+            <p>สั่งพิซซ่า 2 ชิ้น ลด 20% | สั่งครบ 500 บาท ฟรีเครื่องดื่ม</p>
+        </div>
+
+        <div class="pizza-menu loading">
+            <h2>เลือกพิซซ่าโปรดของคุณ</h2>
+            
+            <div class="pizza-grid">
+                <div class="pizza-item loading">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=400&h=220&fit=crop" alt="พิซซ่าเปปเปอโรนี" class="pizza-image">
+                    <div class="pizza-info">
+                        <h3>พิซซ่าเปปเปอโรนี คลาสสิค</h3>
+                        <p class="pizza-description">พิซซ่าเปปเปอโรนีแท้ๆ หน้าใหญ่หนาฉ่ำ โรยด้วยชีสมอซซาเรลลา เนื้อสับปรุงรส</p>
+                        <div class="pizza-details">
+                            <span class="pizza-size">9 นิ้ว</span>
+                            <span class="pizza-price">180 บาท</span>
+                        </div>
+                        <button class="order-btn">สั่งเลย! 🛒</button>
+                    </div>
+                </div>
+
+                <div class="pizza-item loading">
+                    <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400&h=220&fit=crop" alt="พิซซ่าฮาวายเอี้ยน" class="pizza-image">
+                    <div class="pizza-info">
+                        <h3>พิซซ่าฮาวายเอี้ยน</h3>
+                        <p class="pizza-description">พิซซ่าสับปะรดสดใหม่ แฮมหั่นชิ้นใหญ่ รสหวานเค็มกลมกล่อม</p>
+                        <div class="pizza-details">
+                            <span class="pizza-size">9 นิ้ว</span>
+                            <span class="pizza-price">160 บาท</span>
+                        </div>
+                        <button class="order-btn">สั่งเลย! 🛒</button>
+                    </div>
+                </div>
+
+                <div class="pizza-item loading">
+                    <img src="https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?w=400&h=220&fit=crop" alt="พิซซ่าซีฟู้ด" class="pizza-image">
+                    <div class="pizza-info">
+                        <h3>พิซซ่าซีฟู้ดสุดพรีเมี่ยม</h3>
+                        <p class="pizza-description">กุ้งสด หมึกกรอบ เนื้อปูแท้ ผสมพริกไทยดำ หอมกลิ่นสมุนไพร</p>
+                        <div class="pizza-details">
+                            <span class="pizza-size">9 นิ้ว</span>
+                            <span class="pizza-price">220 บาท</span>
+                        </div>
+                        <button class="order-btn">สั่งเลย! 🛒</button>
+                    </div>
+                </div>
+
+                <div class="pizza-item loading">
+                    <img src="https://images.unsplash.com/photo-1588315029754-2dd089d39a1a?w=400&h=220&fit=crop" alt="พิซซ่ามาการีต้า" class="pizza-image">
+                    <div class="pizza-info">
+                        <h3>พิซซ่ามาการีต้าต้นตำรับ</h3>
+                        <p class="pizza-description">ใบโหระพาสด มะเขือเทศซานมาซาโน่ ชีสมอซซาเรลลาแท้ 100%</p>
+                        <div class="pizza-details">
+                            <span class="pizza-size">9 นิ้ว</span>
+                            <span class="pizza-price">150 บาท</span>
+                        </div>
+                        <button class="order-btn">สั่งเลย! 🛒</button>
+                    </div>
+                </div>
+
+                <div class="pizza-item loading">
+                    <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400&h=220&fit=crop" alt="พิซซ่าเนื้อปิ้ง" class="pizza-image">
+                    <div class="pizza-info">
+                        <h3>พิซซ่าเนื้อปิ้งบาร์บีคิว</h3>
+                        <p class="pizza-description">เนื้อย่างบาร์บีคิว หอมใหญ่กรอบ พริกหยวกสี ซอสบาร์บีคิวแท้</p>
+                        <div class="pizza-details">
+                            <span class="pizza-size">9 นิ้ว</span>
+                            <span class="pizza-price">200 บาท</span>
+                        </div>
+                        <button class="order-btn">สั่งเลย! 🛒</button>
+                    </div>
+                </div>
+
+                <div class="pizza-item loading">
+                    <img src="https://images.unsplash.com/photo-1595708684082-a173bb3a06c5?w=400&h=220&fit=crop" alt="พิซซ่าผักโขม" class="pizza-image">
+                    <div class="pizza-info">
+                        <h3>พิซซ่าผักโขมชีสฟีต้า</h3>
+                        <p class="pizza-description">ผักโขมสดใหม่ ชีสฟีต้าจากกรีซ มะกอกดำ กระเทียมโรย</p>
+                        <div class="pizza-details">
+                            <span class="pizza-size">9 นิ้ว</span>
+                            <span class="pizza-price">170 บาท</span>
+                        </div>
+                        <button class="order-btn">สั่งเลย! 🛒</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="loading">
+        📞 โทรสั่ง: 081-234-5678 | 🕙 เปิดทุกวัน 10:00-22:00 น.<br>
+        🚚 ส่งฟรี! เมื่อสั่งครบ 300 บาท (รัศมี 5 กม.)
+    </footer>
+
+    <script>
+        // Create floating particles
+        function createParticles() {
+            const particles = document.getElementById('particles');
+            const particleEmojis = ['🍕', '🧀', '🍅', '🌿', '✨'];
+            
+            setInterval(() => {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.textContent = particleEmojis[Math.floor(Math.random() * particleEmojis.length)];
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDuration = (Math.random() * 3 + 7) + 's';
+                particle.style.fontSize = (Math.random() * 10 + 15) + 'px';
+                particles.appendChild(particle);
+                
+                setTimeout(() => {
+                    particle.remove();
+                }, 10000);
+            }, 3000);
+        }
+        
+        // Intersection Observer for loading animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationDelay = Math.random() * 0.5 + 's';
+                    entry.target.classList.remove('loading');
+                }
+            });
+        }, observerOptions);
+        
+        // Enhanced order button functionality
+        document.querySelectorAll('.order-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Ripple effect
+                const ripple = document.createElement('span');
+                const rect = this.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                const x = e.clientX - rect.left - size / 2;
+                const y = e.clientY - rect.top - size / 2;
+                
+                ripple.style.cssText = `
+                    position: absolute;
+                    width: ${size}px;
+                    height: ${size}px;
+                    left: ${x}px;
+                    top: ${y}px;
+                    background: rgba(255, 255, 255, 0.6);
+                    border-radius: 50%;
+                    transform: scale(0);
+                    animation: ripple 0.6s linear;
+                    pointer-events: none;
+                `;
+                
+                this.appendChild(ripple);
+                
+                setTimeout(() => ripple.remove(), 600);
+                
+                // Order alert with animation
+                const pizzaName = this.closest('.pizza-item').querySelector('h3').textContent;
+                const price = this.closest('.pizza-item').querySelector('.pizza-price').textContent;
+                
+                // Create custom notification
+                const notification = document.createElement('div');
+                notification.innerHTML = `
+                    <div style="
+                        position: fixed;
+                        top: 20px;
+                        right: 20px;
+                        background: linear-gradient(45deg, #4CAF50, #45a049);
+                        color: white;
+                        padding: 20px;
+                        border-radius: 15px;
+                        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+                        z-index: 1000;
+                        animation: slideIn 0.5s ease;
+                        max-width: 300px;
+                    ">
+                        <h4 style="margin: 0 0 10px 0;">🍕 เพิ่มลงตะกร้าแล้ว!</h4>
+                        <p style="margin: 0; font-size: 0.9em;">${pizzaName}</p>
+                        <p style="margin: 5px 0 0 0; font-weight: bold;">${price}</p>
+                        <p style="margin: 10px 0 0 0; font-size: 0.8em;">📞 โทรสั่ง: 081-234-5678</p>
+                    </div>
+                `;
+                
+                document.body.appendChild(notification);
+                
+                setTimeout(() => {
+                    notification.style.animation = 'slideOut 0.5s ease';
+                    setTimeout(() => notification.remove(), 500);
+                }, 3000);
+            });
+        });
+        
+        // Add CSS for animations
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes ripple {
+                to { transform: scale(4); opacity: 0; }
+            }
+            @keyframes slideIn {
+                from { transform: translateX(100%); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
+            }
+            @keyframes slideOut {
+                from { transform: translateX(0); opacity: 1; }
+                to { transform: translateX(100%); opacity: 0; }
+            }
+        `;
+        document.head.appendChild(style);
+        
+        // Initialize everything
+        document.addEventListener('DOMContentLoaded', () => {
+            createParticles();
+            
+            // Observe all loading elements
+            document.querySelectorAll('.loading').forEach(el => {
+                observer.observe(el);
+            });
+            
+            // Add hover sound effect (visual feedback)
+            document.querySelectorAll('.pizza-item').forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    this.style.filter = 'brightness(1.05)';
+                });
+                
+                item.addEventListener('mouseleave', function() {
+                    this.style.filter = 'brightness(1)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

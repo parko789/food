@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เมนูพิซซ่า - ร้านอาหารอร่อยเด็ด</title>
+    <link rel="stylesheet" href="pizza.css">
+</head>
+<style>
+     body {
+            font-family: sans-serif;
+            background-image: url('1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+</style>
+<body>
+    <header>
+        <h1>เมนูเส้นสุดอร่อย</h1>
+    </header>
+
+    <div class="container">
+        <button class="back-button" onclick="window.history.back()">← กลับหน้าหลัก</button>
+        
+      
+
+        <div class="pizza-menu">
+            <h2>เลือกเมนูเส้นโปรดของคุณ</h2>
+
+            <div class="pizza-grid">
+                <div class="pizza-item">
+                    <img src="https://img.wongnai.com/p/1920x0/2018/05/22/8c6e3103c3314af0854735a799f21603.jpg" alt="พิซซ่าเปปเปอโรนี" class="pizza-image">
+                    <div class="pizza-info">
+                        <h3>สปาเกตตีผัดต้มยำกุ้ง</h3>
+                        <p class="pizza-description">เปลี่ยนจากเมนูต้มยำกุ้งธรรมดาเป็น “สปาเกตตีผัดต้มยำกุ้ง” อิ่มง่าย ๆไม่เบื่อ!  </p>
+                        <div class="pizza-details">
+                            <span class="pizza-size">9 นิ้ว</span>
+                            <span class="pizza-price">180 บาท</span>
+                        </div>
+                        <button class="order-btn">สั่งเลย!</button>
+                    </div>
+                </div>
+
+                <div class="pizza-item">
+                    <img src="https://img.wongnai.com/p/1920x0/2018/08/21/97001d21100c4ec5a25a3f527d8dbe4b.jpg" alt="พิซซ่าฮาวายเอี้ยน" class="pizza-image">
+                    <div class="pizza-info">
+                        <h3>ผัดไทยกุ้งสดห่อไข่ </h3>
+                        <p class="pizza-description">ผัดไทยใครว่าทำยาก! “ผัดไทยกุ้งสดห่อไข่”เมนูอาหารไทยรสชาติเข้มข้น กลมกล่อม  </p>
+                        <div class="pizza-details">
+                            <span class="pizza-size">9 นิ้ว</span>
+                            <span class="pizza-price">160 บาท</span>
+                        </div>
+                        <button class="order-btn">สั่งเลย!</button>
+                    </div>
+                </div>
+
+                <div class="pizza-item">
+                    <img src="https://img.wongnai.com/p/l/2017/06/05/c828fb2f4ea44ecc9d682b4fa7b083c1.jpg" alt="พิซซ่าซีฟู้ด" class="pizza-image">
+                    <div class="pizza-info">
+                        <h3>สปาเกตตีคาร์โบนารา</h3>
+                        <p class="pizza-description">“สปาเกตตีคาร์โบนารา” รสชาติแบบต้นฉบับกันแล้วพร้อมแล้วมาเข้าครัวกันเลย! </p>
+                        <div class="pizza-details">
+                            <span class="pizza-size">9 นิ้ว</span>
+                            <span class="pizza-price">220 บาท</span>
+                        </div>
+                        <button class="order-btn">สั่งเลย!</button>
+                    </div>
+                </div>
+
+             
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        📞 โทรสั่ง: 081-234-5678 | 🕙 เปิดทุกวัน 10:00-22:00 น.<br>
+        🚚 ส่งฟรี! เมื่อสั่งครบ 300 บาท (รัศมี 5 กม.)
+    </footer>
+
+    <script>
+        // เพิ่ม animation เมื่อ scroll
+        window.addEventListener('scroll', () => {
+            const items = document.querySelectorAll('.pizza-item');
+            items.forEach(item => {
+                const rect = item.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 100) {
+                    item.style.opacity = '1';
+                    item.style.transform = 'translateY(0)';
+                }
+            });
+        });
+
+       
+
+        // ฟังก์ชันสั่งพิซซ่า
+        document.querySelectorAll('.order-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const pizzaName = this.closest('.pizza-item').querySelector('h3').textContent;
+            alert(` เพิ่ม "${pizzaName}" ลงตะกร้าแล้ว!\n\nโทรสั่ง: 081-234-5678`);
+            });
+        });
+    </script>
+</body>
+</html>
